@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         switch (id) {
             case R.id.text_1:
                 break;
-            
+
         }
     }
 }

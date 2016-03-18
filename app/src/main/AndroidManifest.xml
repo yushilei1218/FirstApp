@@ -20,6 +20,9 @@
         </activity>
         <activity android:name=".RecyclerActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <receiver android:name=".receivers.MediaReceiver"
+            android:exported="false"
+            android:enabled="true"/>
     </application>
 
 </manifest>
