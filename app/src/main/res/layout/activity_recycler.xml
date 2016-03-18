@@ -21,6 +21,24 @@
                 android:scaleType="fitXY"
                 android:src="@mipmap/ic_launcher" />
         </android.support.design.widget.CollapsingToolbarLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                style="@style/radio"
+                android:text="@string/select" />
+
+            <RadioButton
+                style="@style/radio"
+                android:text="@string/select" />
+
+            <RadioButton
+                style="@style/radio"
+                android:text="@string/select" />
+        </RadioGroup>
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v7.widget.RecyclerView
