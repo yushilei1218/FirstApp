@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Created by jh on 2016/3/18.
  */
-public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemViewHolder> {
+public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemViewHolder> implements View.OnClickListener {
 
     private List<String> data;
 
@@ -28,7 +28,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemVi
             notifyItemRangeInserted(size, size1);
         }
     }
-    
+
     public void remove(int position) {
         int size = data.size();
         if (size - 1 >= position) {
@@ -47,6 +47,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemVi
     @Override
     public void onBindViewHolder(ItemViewHolder holder, int position) {
         holder.textView.setText(data.get(position));
+        holder.itemView.setTag(position);
+        holder.itemView.setOnClickListener(this);
     }
 
     @Override
@@ -54,7 +56,23 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemVi
         return data.size();
     }
 
+    @Override
+    public void onClick(View v) {
+
+        int index = (int) v.getTag();
+        remove(index);
+    }
+
     public static class ItemViewHolder extends RecyclerView.ViewHolder {
+        private int mPosition;
+
+        public int getmPosition() {
+            return mPosition;
+        }
+
+        public void setmPosition(int mPosition) {
+            this.mPosition = mPosition;
+        }
 
         private final TextView textView;
 
