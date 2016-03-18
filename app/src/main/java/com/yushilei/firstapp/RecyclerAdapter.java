@@ -28,6 +28,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ItemVi
             notifyItemRangeInserted(size, size1);
         }
     }
+    public void remove(int position) {
+        int size = data.size();
+        if (size - 1 > position) {
+            data.remove(position);
+            notifyItemRemoved(position);
+        }
+    }
 
     @Override
     public ItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
