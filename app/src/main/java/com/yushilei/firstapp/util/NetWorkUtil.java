@@ -5,6 +5,6 @@ package com.yushilei.firstapp.util;
  */
 public class NetWorkUtil {
     public interface Service{
-        
+
     }
 }
