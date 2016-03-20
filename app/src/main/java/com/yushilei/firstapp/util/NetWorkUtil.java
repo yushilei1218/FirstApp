@@ -14,7 +14,8 @@ public class NetWorkUtil {
     private static Service service;
 
     static {
-        service = new Retrofit.Builder().addConverterFactory(GsonConverterFactory.create()).baseUrl("http://www.baidu.com")
-                .build().create(Service.class);
+        service = new Retrofit.Builder().baseUrl("http;//www.baidu.com")
+                .addConverterFactory(GsonConverterFactory.create()).build()
+                .create(Service.class);
     }
 }
