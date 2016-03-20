@@ -23,6 +23,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //新增加一行
+        
         //找出绝大多数需要使用的View
         findViews();
         //统一初始化各个控件点击事件
